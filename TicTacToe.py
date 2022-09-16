@@ -1,36 +1,17 @@
-#Create a Tic Tac Toe
+################## HEADER ################
+#Code written by Anne-Lise Marais
+#Contact at maraisannelise98 [at] gmail [dot] com
 
+#Run the last script to play Tic Tac Toe with CPU
+#Run the two players script to play Tic Tac Toe with someone (not finished)
 
+#requires !pip install inquirer
 
-####################Brainstorming######################
-##Create a 3*3 matrix, no user interface, have a prompt asking where you put your X, randomized whos X and O (first player), create a rule "3 in line = victory", no space = par, 
+################### TIC TAC TOE ###########################
 
-
-	#First, create a matrix
-
-M = np.arange(10) #It's a vector, need a 2D matrix
-
-M2 =  np.random.randint(1, 10, size=(3, 3)) #creates a 2D matrix with size 3*3 and random numbers btw 1 and 10
-
-	#Understand how indexing works in a matrix, 0 base indexing !!!!!
-
-M2[0,2] #Returns first row, third column number
-
-	#Create an empty array for STRINGS
-
-
-#TTT = np.chararray((3, 3))
-#TTT[:] = '.'
-
-#TTT = [['.','.','.'],['.','.','.'],['.','.','.']]
-
-
-
-
-###################TIC TAC TOE###########################
-####################FIRST TRY############################
+#################### FIRST TRY ############################
 	
-pip install inquirer #add an inquirer
+
 
 
 import numpy as np 
@@ -119,7 +100,6 @@ def TicTacToeCPU():
 	print(TTT)
 
 
-
 while Player_score != 1:
 #Set winning combinations
 	if TTT[0,0] == 1 and TTT[0,1] == 1 and TTT[0,2] == 1:
@@ -175,6 +155,9 @@ while Player_score != 1:
 			TicTacToeCPU()
 		else:
 			TicTacToePlayer()
+
+
+
 
 ######################TWO PLAYERS########################
 
@@ -273,7 +256,6 @@ def TicTacToePlayer2():
 	print(TTT)
 
 
-
 while Player_score != 1:
 #Set winning combinations
 	if TTT[0,0] == 1 and TTT[0,1] == 1 and TTT[0,2] == 1:
@@ -332,7 +314,7 @@ while Player_score != 1:
 
 
 
-####################SECOND TRY############################
+#################### SECOND TRY ############################
 
 import inquirer 
 import random 

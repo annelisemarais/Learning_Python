@@ -1,3 +1,14 @@
+################## HEADER ################
+#Code written by Anne-Lise Marais
+#Contact at maraisannelise98 [at] gmail [dot] com
+
+#Run the first script to play rock, paper, scissors
+#Run the second script for your best mate (he'll always loose)
+
+##########################################
+
+############## First version #############
+
 import random
 import time
 def RPC():
@@ -48,7 +59,7 @@ def RPC():
 		print("Try again")
 
 
-######MODIFIED VERSION - CPU ALWAYS WIN##########
+###### MODIFIED VERSION - CPU ALWAYS WINS ##########
 
 import time
 def RPC():
