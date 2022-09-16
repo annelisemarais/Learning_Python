@@ -1,3 +1,12 @@
+################## HEADER ################
+#Code written by Anne-Lise Marais
+#Contact at maraisannelise98 [at] gmail [dot] com
+
+#Run the script to play Millionaire
+#you can change questions and answers as wanted
+
+##########################################
+
 import time
 def suspense():
 	a = 3
