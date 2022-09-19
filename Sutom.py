@@ -70,3 +70,8 @@ while True:
 		wordcomparison(playerchoice,word)
 	else:
 		print('Bravo')
+
+#Still to code:
+#If the lettre is multiple ?? Not just exist in the word
+#Stop the bravo
+#Problem with player choice display and have to write it twice ???
