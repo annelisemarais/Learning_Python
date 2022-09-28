@@ -393,3 +393,24 @@ while True:
 		break
 	else:
 		WhoPlays = TicTacToe(Board, WhoPlays)
+
+
+
+
+
+
+
+
+
+############### USING CLASS ##############
+
+class board:
+	def __init__(self):
+		self.board = [' ' ,' ',' ',' ',' ',' ',' ',' ',' ']
+
+	def Board_setup(board):
+	print(' {} '.format(self.board[0]),'|  {} '.format(self.board[1]),'|  {} '.format(self.board[2]))
+	print('--------------')
+	print(' {} '.format(self.board[3]),'|  {} '.format(self.board[4]),'|  {} '.format(self.board[5]))
+	print('--------------')
+	print(' {} '.format(self.board[6]),'|  {} '.format(self.board[7]),'|  {} '.format(self.board[8]))
