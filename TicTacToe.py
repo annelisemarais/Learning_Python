@@ -403,14 +403,49 @@ while True:
 
 
 ############### USING CLASS ##############
+import inquirer 
+import random 
+import time
 
 class board:
 	def __init__(self):
 		self.board = [' ' ,' ',' ',' ',' ',' ',' ',' ',' ']
 
-	def Board_setup(board):
+	def print_board(board):
 	print(' {} '.format(self.board[0]),'|  {} '.format(self.board[1]),'|  {} '.format(self.board[2]))
 	print('--------------')
 	print(' {} '.format(self.board[3]),'|  {} '.format(self.board[4]),'|  {} '.format(self.board[5]))
 	print('--------------')
 	print(' {} '.format(self.board[6]),'|  {} '.format(self.board[7]),'|  {} '.format(self.board[8]))
+
+	def win(self):
+		return (self.board[0] ==  self.board[1] == self.board[2])\
+		or (self.board[3] ==  self.board[4] == self.board[5])\
+		or (self.board[6] ==  self.board[7] == self.board[8])\
+		or (self.board[0] ==  self.board[3] == self.board[6])\
+		or (self.board[1] ==  self.board[4] == self.board[7])\
+		or (self.board[2] ==  self.board[5] == self.board[8])\
+		or (self.board[0] ==  self.board[4] == self.board[8])\
+		or (self.board[2] ==  self.board[4] == self.board[6])
+
+	def tie(self):
+		return (self.board[0] == 'X' or 'O') and (self.board[1] == 'X' or 'O') and(self.board[2] == 'X' or 'O') and(self.board[3] == 'X' or 'O')\
+ 	and(self.board[4] == 'X' or 'O') and(self.board[5] == 'X' or 'O') and(self.board[6] == 'X' or 'O') and(self.board[7] == 'X' or 'O') and (self.board[8] == 'X' or 'O')
+
+
+
+
+
+board_position = {'Top left':0,'Top middle':1,'Top right':2,'Middle left':3,'Middle':4,'Middle right':5,'Bottom left':6,'Bottom middle':7,'Bottom right':8}
+
+
+def WhoPlays():
+	print('If your playing against CPU, please enter first player as CPU')
+	Player1 = input("Enter Name of the first player")
+	Player2 = input("Enter Name of the second player")
+	AllPlayers = [Player1, Player2]
+	return AllPlayers
+
+Players = WhoPlays()
+FirstPlayer = random.choice(Players)
+print('First Player is {}. Please choose wisely.'.format(FirstPlayer))
